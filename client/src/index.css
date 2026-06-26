@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f5f6fa;
+  color: #1a1a2e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1a1a2e;
+  color: white;
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-links a {
+  color: #ccc;
+}
+
+.navbar-links a:hover {
+  color: #fff;
+}
+
+.navbar-user {
+  color: #aaa;
+}
+
+.navbar-logout-btn {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Home */
+.home-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.home-container h1 {
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #e94560;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Post Card */
+.post-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.post-cover {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.post-card-body {
+  padding: 1rem;
+}
+
+.post-category {
+  display: inline-block;
+  background: #e9456022;
+  color: #e94560;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-excerpt {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.8rem;
+}
+
+.read-more-btn {
+  color: #e94560;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Auth pages */
+.auth-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.auth-form input {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.auth-form button {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+}
+
+.error-msg {
+  color: #e94560;
+  margin-top: 0.5rem;
+}
+
+/* Create / Edit Post */
+.create-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.post-form input,
+.post-form select,
+.post-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.post-form button {
+  background: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Single Post */
+.single-post-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.single-post-cover {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.single-post-content {
+  margin-top: 1.5rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.post-owner-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.edit-btn {
+  background: #1a1a2e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.delete-btn {
+  background: #e94560;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid #ddd;
+  border-top-color: #e94560;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
