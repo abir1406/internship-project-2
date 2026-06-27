@@ -16,7 +16,7 @@ git clone <your-repo-link>
 cd blog-app
 ```
 
-### 2. Set up the backend mm
+### 2. Set up the backend 
 
 ```bash
 cd server
